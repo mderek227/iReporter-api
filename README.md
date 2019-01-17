@@ -1,7 +1,8 @@
 # iReporter
 
- [![Build Status](https://travis-ci.org/mderek227/iReporter-api.svg?branch=api)](https://travis-ci.org/mderek227/iReporter-api) [![Coverage Status](https://coveralls.io/repos/github/mderek227/iReporter-api/badge.svg?branch=api)](https://coveralls.io/github/mderek227/iReporter-api?branch=api) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/55c30326bca466d990d32aabd8a2158)](https://www.codacy.com/app/mderek227/iReporter-api?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mderek227/iReporter-api&amp;utm_campaign=Badge_Grade)
-
+ [![Build Status](https://travis-ci.org/mderek227/iReporter-api.svg?branch=api)](https://travis-ci.org/mderek227/iReporter-api) [![Coverage Status](https://coveralls.io/repos/github/mderek227/iReporter-api/badge.svg?branch=api)](https://coveralls.io/github/mderek227/iReporter-api?branch=api) 
+ 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1360084b0a94b0fb2e0d07bdbe7c47d)](https://www.codacy.com/app/mderek227/iReporter-api?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mderek227/iReporter-api&amp;utm_campaign=Badge_Grade)
 ## About
 
 iReporter enables citizens to report any form of corruption to the appropriate authorities. Users can also alert government on things that need intervention.
