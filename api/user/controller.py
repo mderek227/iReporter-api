@@ -1,5 +1,5 @@
 from flask import request, jsonify
-from validate_email import validate_email
+# from api.user.utilities import validate_email
 from api.user.models import User, user_db
 from api.user.utilities import validateUser
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -33,8 +33,8 @@ def signup_user():
         return jsonify({'status': 400,
                         'error': 'Only numbers are allowed for the phonenumber field'
                         }), 400
-    if not validate_email(email):
-        return jsonify({'status': 400, 'error': 'Invalid email'}), 400
+    #if not validate_email(email):
+     #   return jsonify({'status': 400, 'error': 'Invalid email'}), 400
     if not validateUser.validate_password(userPassword):
         return jsonify({'status': 400,
                         'error': 'Password must be atleast 8 characters and should have atleast one number and one capital letter'}), 400
@@ -44,8 +44,10 @@ def signup_user():
         return jsonify({'status': 400,
                         'error': 'User account already exists'}), 400
     user_db.append(user.to_json())
+    access_token = create_access_token(userName)
     return jsonify({'status': 201, 'data': user.to_json(),
-                    'message': 'Your Account was created successfuly'}), 201
+                    'message': 'Your Account was created successfuly',
+                    'access_token': access_token }), 201
 
 
 # function to login a user
@@ -56,8 +58,8 @@ def login_user():
     if not login_email or not login_password:
         return jsonify({'status': 400,
                         'error': 'email or password cannot be empty'}), 400
-    if not validate_email(login_email):
-        return jsonify({'status': 400, 'error': 'Invalid email'}), 400
+    #if not validate_email(login_email):
+    #   return jsonify({'status': 400, 'error': 'Invalid email'}), 400
     if not validateUser.validate_password(login_password):
         return jsonify({'status': 400,
                         'error': 'Password must be atleast 8 characters and should have atleast one number and one capital letter'}), 400
@@ -73,7 +75,7 @@ def login_user():
 
 def create_admin():
     admin = User('Derrick', 'Mananu', 'Paul', 'mderek227@gmail.com',
-                  '0777123456', 'mderek', generate_password_hash('Pass1234'), isAdmin=True )
+                  '7777123456', 'mderek', generate_password_hash('Pass1234'), isAdmin=True )
     user_db.append(admin.to_json())
 
 create_admin()

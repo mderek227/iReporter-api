@@ -4,13 +4,13 @@ from flask import make_response, jsonify
 
 
 # signup user route
-@auths.route('/users', methods=['POST'])
+@auths.route('/auth/signup', methods=['POST'])
 def signup():
    return signup_user()
 
 
 # login user or admin route
-@auths.route('/users/login', methods=['POST'])
+@auths.route('/auth/login', methods=['POST'])
 def login():
    return login_user()
 
