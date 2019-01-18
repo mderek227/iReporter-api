@@ -21,7 +21,7 @@ class BaseTest(unittest.TestCase):
 
     def get_token_admin(self):
         admin_data_login = {
-                            "email":"mderek427@gmail.com",
+                            "email":"mderek227@gmail.com",
                             "password": "Pass12345"
                             }
         create_admin()
@@ -36,13 +36,13 @@ class BaseTest(unittest.TestCase):
                     "lastname":"Mananu",
                     "othernames":"Paul",
                     "email":"mderek227@gmail.com",
-                    "phonenumber":0777123456,
+                    "phonenumber":7777123456,
                     "username":"mderek",
                     "password":"Pass1234"
                     }
         user_data_login = {
-                            "email":"andela@gmail.com",
-                            "password": "Events1234"
+                            "email":"mderek227@gmail.com",
+                            "password": "Pass1234"
                             }
         self.app.post('/api/v1/users', content_type="application/json", data=json.dumps(user_data))
         res = self.app.post('/api/v1/users/login', content_type="application/json", data=json.dumps(user_data_login))

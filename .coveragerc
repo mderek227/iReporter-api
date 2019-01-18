@@ -20,3 +20,11 @@ omit =
     *pyc
     *python
     asyncio/*
+    */api/user/models.py
+    */api/incident/models.py
+    */instance/*
+    */Lib/*
+    */Scripts/*
+    */Include/*
+    */.pytest_cache/*
+    */pyvenv.cfg

@@ -22,6 +22,7 @@ class validateUser:
         """method validates user's password """
         return isinstance(password, str) and len(password) >= 8 and \
                 re.search(r'[A-Z]', password) and re.search(r'[0-9]', password)
+    
 
 
 def get_user(current_user):
